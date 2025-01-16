@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+
+/* scroll bar */
+
+* {
+  /* scrollbar-width: auto; */
+  scrollbar-width: 20px;
+  scrollbar-color: #afb2bf;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000814;
+  /* background: #12D8FA; */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #afb2bf;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+*:active::-webkit-scrollbar-thumb,
+*:focus::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.LabelClass{
+  @apply font-medium text-richblack-50
+}
+
+.Checkbox{
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid whitesmoke;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.35rem;
+}
+.Checkbox:checked{
+  background-color:rgb(50, 70, 70) ;
+}
+.Checkbox:checked::before{
+  content: " ✔";
+  position: absolute;
+  top: -10%;
+  left: 20%;
+  color: rgb(13, 185, 238);
+  font-size:1.05rem;
+  font-weight: 600;
+
+}
